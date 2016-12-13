@@ -25,9 +25,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    TableViewController *tblViewController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
+//    TableViewController *tblViewController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
+    SegmentViewController *segmentViewController = [[SegmentViewController alloc] init];
     
-    navigationController = [[UINavigationController alloc] initWithRootViewController:tblViewController];
+    
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.itemSize = CGSizeMake(100, 100);
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    
+    collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    collectionViewController.collectionView.frame = self.window.bounds;
+
+    navigationController = [[UINavigationController alloc] initWithRootViewController:collectionViewController];
     
     self.window.rootViewController = navigationController;
 

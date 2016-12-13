@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "SegmentViewController.h"
 
 @interface TableViewController ()
 
@@ -30,13 +31,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor redColor]];
+//    [self.view setBackgroundColor:[UIColor redColor]];
+
     
-    // Uncomment the following line to preserve selection between presentations.
+        // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    UIBarButtonItem *nextVCBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                                     target:self
+                                                                                     action:@selector(nextVC)];
+    
+    self.navigationItem.rightBarButtonItem = nextVCBarButton;
+
+
+}
+
+- (void)nextVC
+{
+    SegmentViewController *segVC = [[SegmentViewController alloc] init];
+    
+    [self.navigationController pushViewController:segVC animated:YES];
 
 }
 
@@ -49,7 +64,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

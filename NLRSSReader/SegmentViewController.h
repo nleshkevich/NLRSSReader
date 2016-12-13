@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableViewController.h"
+#import "CollectionViewController.h"
 
 @interface SegmentViewController : UIViewController <UINavigationControllerDelegate> {
     
@@ -15,6 +17,7 @@
     NSArray             *segmentedViewController;
 }
 
-
+@property(nonatomic, retain) TableViewController *tableViewController;
+@property(nonatomic, retain) CollectionViewController *collectionViewController;
 
 @end

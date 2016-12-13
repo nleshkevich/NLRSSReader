@@ -8,22 +8,79 @@
 
 #import "SegmentViewController.h"
 
+
 @interface SegmentViewController ()
 
 @end
 
 @implementation SegmentViewController
 
+@synthesize tableViewController;
+@synthesize collectionViewController;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
     [self.view setBackgroundColor:[UIColor blueColor]];
-    // Do any additional setup after loading the view.
+    
+    segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Table", @"Collection"]];
+    segmentedControl.frame = CGRectMake(10, 10, 155, 30);
+    [segmentedControl addTarget:self action:@selector(segmentedControlValueDidChange:) forControlEvents:UIControlEventValueChanged];
+    [segmentedControl setSelectedSegmentIndex:0];
+    self.navigationItem.titleView = segmentedControl;
+    
+    tableViewController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
+    tableViewController.tableView.frame = self.view.bounds;
+    [self.view addSubview:self.tableViewController.tableView];
+    
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.itemSize = CGSizeMake(100, 100);
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    
+    collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    collectionViewController.collectionView.frame = self.view.bounds;
+    //[self.view addSubview:self.collectionViewController.collectionView];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)segmentedControlValueDidChange:(UISegmentedControl *)segment
+{
+    UIView *fromView, *toView;
+    
+    switch (segmentedControl.selectedSegmentIndex) {
+        case 0:
+            NSLog(@"Table segment selected");
+            
+            if (self.collectionViewController.view.superview == self.view)
+            {
+                fromView = self.collectionViewController.collectionView;
+                toView = self.tableViewController.tableView;
+            }
+            
+            break;
+        case 1:
+            NSLog(@"Collection segment selected");
+            
+            if (self.tableViewController.view.superview == self.view)
+            {
+                fromView = self.tableViewController.tableView;
+                toView = self.collectionViewController.collectionView;
+            }
+            
+            break;
+        default:
+            break;
+    }
+    
+    [fromView removeFromSuperview];
+    toView.frame = self.view.bounds;
+    [self.view addSubview:toView];
 }
 
 /*
