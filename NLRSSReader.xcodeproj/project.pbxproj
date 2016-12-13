@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9729EA81DF846F10059C284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9729EA71DF846F10059C284 /* main.m */; };
+		D9729EAB1DF846F10059C284 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9729EAA1DF846F10059C284 /* AppDelegate.m */; };
+		D9729EB41DF846F10059C284 /* NLRSSReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9729EB21DF846F10059C284 /* NLRSSReader.xcdatamodeld */; };
+		D9729EB61DF846F10059C284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9729EB51DF846F10059C284 /* Assets.xcassets */; };
+		D9E379461DF9963600C5934C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E379451DF9963600C5934C /* TableViewController.m */; };
+		D9E379481DF99B3B00C5934C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E379471DF99B3B00C5934C /* Default-568h@2x.png */; };
+		D9E3794D1DFA9A8100C5934C /* SegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E3794C1DFA9A8100C5934C /* SegmentViewController.m */; };
+		D9E379501DFAA3E900C5934C /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E3794F1DFAA3E900C5934C /* CollectionViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D9729EA31DF846F10059C284 /* NLRSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NLRSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9729EA71DF846F10059C284 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D9729EA91DF846F10059C284 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D9729EAA1DF846F10059C284 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D9729EB31DF846F10059C284 /* NLRSSReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NLRSSReader.xcdatamodel; sourceTree = "<group>"; };
+		D9729EB51DF846F10059C284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9729EBA1DF846F10059C284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9E379441DF9963600C5934C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		D9E379451DF9963600C5934C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		D9E379471DF99B3B00C5934C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D9E3794B1DFA9A8100C5934C /* SegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentViewController.h; sourceTree = "<group>"; };
+		D9E3794C1DFA9A8100C5934C /* SegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentViewController.m; sourceTree = "<group>"; };
+		D9E3794E1DFAA3E900C5934C /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		D9E3794F1DFAA3E900C5934C /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9729EA01DF846F10059C284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9729E9A1DF846F10059C284 = {
+			isa = PBXGroup;
+			children = (
+				D9E379471DF99B3B00C5934C /* Default-568h@2x.png */,
+				D9729EA51DF846F10059C284 /* NLRSSReader */,
+				D9729EA41DF846F10059C284 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9729EA41DF846F10059C284 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9729EA31DF846F10059C284 /* NLRSSReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9729EA51DF846F10059C284 /* NLRSSReader */ = {
+			isa = PBXGroup;
+			children = (
+				D9729EA91DF846F10059C284 /* AppDelegate.h */,
+				D9729EAA1DF846F10059C284 /* AppDelegate.m */,
+				D9E3794B1DFA9A8100C5934C /* SegmentViewController.h */,
+				D9E3794C1DFA9A8100C5934C /* SegmentViewController.m */,
+				D9E379441DF9963600C5934C /* TableViewController.h */,
+				D9E379451DF9963600C5934C /* TableViewController.m */,
+				D9E3794E1DFAA3E900C5934C /* CollectionViewController.h */,
+				D9E3794F1DFAA3E900C5934C /* CollectionViewController.m */,
+				D9729EB51DF846F10059C284 /* Assets.xcassets */,
+				D9729EBA1DF846F10059C284 /* Info.plist */,
+				D9729EB21DF846F10059C284 /* NLRSSReader.xcdatamodeld */,
+				D9729EA61DF846F10059C284 /* Supporting Files */,
+			);
+			path = NLRSSReader;
+			sourceTree = "<group>";
+		};
+		D9729EA61DF846F10059C284 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9729EA71DF846F10059C284 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9729EA21DF846F10059C284 /* NLRSSReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9729EBD1DF846F10059C284 /* Build configuration list for PBXNativeTarget "NLRSSReader" */;
+			buildPhases = (
+				D9729E9F1DF846F10059C284 /* Sources */,
+				D9729EA01DF846F10059C284 /* Frameworks */,
+				D9729EA11DF846F10059C284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NLRSSReader;
+			productName = NLRSSReader;
+			productReference = D9729EA31DF846F10059C284 /* NLRSSReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9729E9B1DF846F10059C284 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Nick L";
+				TargetAttributes = {
+					D9729EA21DF846F10059C284 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 4B24TB93H6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D9729E9E1DF846F10059C284 /* Build configuration list for PBXProject "NLRSSReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9729E9A1DF846F10059C284;
+			productRefGroup = D9729EA41DF846F10059C284 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9729EA21DF846F10059C284 /* NLRSSReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9729EA11DF846F10059C284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9729EB61DF846F10059C284 /* Assets.xcassets in Resources */,
+				D9E379481DF99B3B00C5934C /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9729E9F1DF846F10059C284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E379461DF9963600C5934C /* TableViewController.m in Sources */,
+				D9729EB41DF846F10059C284 /* NLRSSReader.xcdatamodeld in Sources */,
+				D9E379501DFAA3E900C5934C /* CollectionViewController.m in Sources */,
+				D9729EAB1DF846F10059C284 /* AppDelegate.m in Sources */,
+				D9E3794D1DFA9A8100C5934C /* SegmentViewController.m in Sources */,
+				D9729EA81DF846F10059C284 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D9729EBB1DF846F10059C284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D9729EBC1DF846F10059C284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9729EBE1DF846F10059C284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 4B24TB93H6;
+				INFOPLIST_FILE = NLRSSReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ee.NLRSSReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D9729EBF1DF846F10059C284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 4B24TB93H6;
+				INFOPLIST_FILE = NLRSSReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ee.NLRSSReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9729E9E1DF846F10059C284 /* Build configuration list for PBXProject "NLRSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9729EBB1DF846F10059C284 /* Debug */,
+				D9729EBC1DF846F10059C284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9729EBD1DF846F10059C284 /* Build configuration list for PBXNativeTarget "NLRSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9729EBE1DF846F10059C284 /* Debug */,
+				D9729EBF1DF846F10059C284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D9729EB21DF846F10059C284 /* NLRSSReader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D9729EB31DF846F10059C284 /* NLRSSReader.xcdatamodel */,
+			);
+			currentVersion = D9729EB31DF846F10059C284 /* NLRSSReader.xcdatamodel */;
+			path = NLRSSReader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D9729E9B1DF846F10059C284 /* Project object */;
+}
