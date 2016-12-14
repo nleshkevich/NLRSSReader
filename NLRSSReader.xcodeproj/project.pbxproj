@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D93149541E0166B200D52F57 /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D93149531E0166B200D52F57 /* DataLoader.m */; };
+		D93149591E017DE000D52F57 /* XMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D93149581E017DE000D52F57 /* XMLParserDelegate.m */; };
 		D9729EA81DF846F10059C284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9729EA71DF846F10059C284 /* main.m */; };
 		D9729EAB1DF846F10059C284 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9729EAA1DF846F10059C284 /* AppDelegate.m */; };
 		D9729EB41DF846F10059C284 /* NLRSSReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D9729EB21DF846F10059C284 /* NLRSSReader.xcdatamodeld */; };
@@ -18,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D93149521E0166B200D52F57 /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
+		D93149531E0166B200D52F57 /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
+		D93149561E01702900D52F57 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D93149571E017DE000D52F57 /* XMLParserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParserDelegate.h; sourceTree = "<group>"; };
+		D93149581E017DE000D52F57 /* XMLParserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParserDelegate.m; sourceTree = "<group>"; };
 		D9729EA31DF846F10059C284 /* NLRSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NLRSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9729EA71DF846F10059C284 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9729EA91DF846F10059C284 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +72,10 @@
 		D9729EA51DF846F10059C284 /* NLRSSReader */ = {
 			isa = PBXGroup;
 			children = (
+				D93149571E017DE000D52F57 /* XMLParserDelegate.h */,
+				D93149581E017DE000D52F57 /* XMLParserDelegate.m */,
+				D93149521E0166B200D52F57 /* DataLoader.h */,
+				D93149531E0166B200D52F57 /* DataLoader.m */,
 				D9729EA91DF846F10059C284 /* AppDelegate.h */,
 				D9729EAA1DF846F10059C284 /* AppDelegate.m */,
 				D9E3794B1DFA9A8100C5934C /* SegmentViewController.h */,
@@ -73,6 +84,7 @@
 				D9E379451DF9963600C5934C /* TableViewController.m */,
 				D9E3794E1DFAA3E900C5934C /* CollectionViewController.h */,
 				D9E3794F1DFAA3E900C5934C /* CollectionViewController.m */,
+				D93149561E01702900D52F57 /* Constants.h */,
 				D9729EB51DF846F10059C284 /* Assets.xcassets */,
 				D9729EBA1DF846F10059C284 /* Info.plist */,
 				D9729EB21DF846F10059C284 /* NLRSSReader.xcdatamodeld */,
@@ -164,8 +176,10 @@
 				D9729EB41DF846F10059C284 /* NLRSSReader.xcdatamodeld in Sources */,
 				D9E379501DFAA3E900C5934C /* CollectionViewController.m in Sources */,
 				D9729EAB1DF846F10059C284 /* AppDelegate.m in Sources */,
+				D93149541E0166B200D52F57 /* DataLoader.m in Sources */,
 				D9E3794D1DFA9A8100C5934C /* SegmentViewController.m in Sources */,
 				D9729EA81DF846F10059C284 /* main.m in Sources */,
+				D93149591E017DE000D52F57 /* XMLParserDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,11 +13,11 @@
 @interface SegmentViewController : UIViewController <UINavigationControllerDelegate> {
     
     UISegmentedControl  *segmentedControl;
-    UIViewController    *activeViewController;
-    NSArray             *segmentedViewController;
+//    UIViewController    *activeViewController;
+//    NSArray             *segmentedViewController;
 }
 
-@property(nonatomic, retain) TableViewController *tableViewController;
-@property(nonatomic, retain) CollectionViewController *collectionViewController;
+@property(nonatomic, strong) TableViewController *tableViewController;
+@property(nonatomic, strong) CollectionViewController *collectionViewController;
 
 @end

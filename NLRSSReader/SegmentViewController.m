@@ -30,18 +30,20 @@
     [segmentedControl setSelectedSegmentIndex:0];
     self.navigationItem.titleView = segmentedControl;
     
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.itemSize = CGSizeMake(100, 100);
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+
+    collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+    collectionViewController.collectionView.frame = self.view.bounds;
+    //[self.view addSubview:self.collectionViewController.collectionView];
+    
     tableViewController = [[TableViewController alloc] initWithStyle:UITableViewStylePlain];
     tableViewController.tableView.frame = self.view.bounds;
     [self.view addSubview:self.tableViewController.tableView];
     
     
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(100, 100);
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     
-    collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
-    collectionViewController.collectionView.frame = self.view.bounds;
-    //[self.view addSubview:self.collectionViewController.collectionView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,7 +59,7 @@
         case 0:
             NSLog(@"Table segment selected");
             
-            if (self.collectionViewController.view.superview == self.view)
+            if (self.collectionViewController.collectionView.superview == self.view)
             {
                 fromView = self.collectionViewController.collectionView;
                 toView = self.tableViewController.tableView;
@@ -71,6 +73,7 @@
             {
                 fromView = self.tableViewController.tableView;
                 toView = self.collectionViewController.collectionView;
+                
             }
             
             break;
@@ -80,6 +83,11 @@
     
     [fromView removeFromSuperview];
     toView.frame = self.view.bounds;
+//    if ([toView isKindOfClass:[UICollectionView class]]) {
+//        UICollectionViewFlowLayout *layout = [((UICollectionViewFlowLayout *)toView).collectionView.collectionViewLayout;
+//        layout setScrollDirection:UICollectionViewScrollDirectionVertical
+//        NSLog(@"%@ ", toView);
+//    }
     [self.view addSubview:toView];
 }
 

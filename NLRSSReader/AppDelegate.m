@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DataLoader.h"
 #import "TableViewController.h"
 #import "SegmentViewController.h"
 #import "CollectionViewController.h"
@@ -21,7 +22,7 @@
 @synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [DataLoader loadData];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
@@ -30,14 +31,14 @@
     
     
     
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(100, 100);
-    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    
-    collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
-    collectionViewController.collectionView.frame = self.window.bounds;
+//    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+//    flowLayout.itemSize = CGSizeMake(100, 100);
+//    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+//    
+//    collectionViewController = [[CollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+//    collectionViewController.collectionView.frame = self.window.bounds;
 
-    navigationController = [[UINavigationController alloc] initWithRootViewController:collectionViewController];
+    navigationController = [[UINavigationController alloc] initWithRootViewController:segmentViewController];
     
     self.window.rootViewController = navigationController;
 
