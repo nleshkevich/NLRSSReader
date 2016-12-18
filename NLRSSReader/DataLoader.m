@@ -32,32 +32,30 @@ static DataLoader *sharedInstance;
      
 - (void)downloadDataBg
 {
-    NSURL *feedURL = [NSURL URLWithString:kRSSFeedURL];
-    
-    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:feedURL];
-    
-    XMLParserDelegate *delegate = [[XMLParserDelegate alloc] init];
-    [xmlParser setDelegate:delegate];
-    //[xmlParser parse];
-// TODO: Init XMLParserDelegate here
-    
     //Create block to execute
     dispatch_block_t dispatch_block = ^(void) {
         
-        [xmlParser parse];
+        NSURL *feedURL = [NSURL URLWithString:kRSSFeedURL];
         
-//        if ([xmlParser parserError]) {
-////        TODO: Create Alert in this place
-////            dispatch_sync(dispatch_get_main_queue(), ^{[alertView show];});
-//            NSLog(@"xmlParser error!");
-//        }
+        NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithContentsOfURL:feedURL];
+        
+        XMLParserDelegate *delegate = [[XMLParserDelegate alloc] init];
+        [xmlParser setDelegate:delegate];
+        
+        BOOL success = [xmlParser parse];
+        // test the result
+        if (success) {
+            NSLog(@"No errors");
+        } else {
+            NSLog(@"Error");
+        }
         
     };
     
     //Create queue with unique name
-    dispatch_queue_t dispatch_queue = dispatch_queue_create("com.rssReader.queue", NULL);
+    dispatch_queue_t fetch_queue = dispatch_queue_create("com.rssReader.queue", NULL);
     //Dispatch queue
-    dispatch_async(dispatch_queue, dispatch_block);
+    dispatch_async(fetch_queue, dispatch_block);
     
 }
 
