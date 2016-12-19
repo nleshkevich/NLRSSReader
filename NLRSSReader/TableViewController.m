@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-#import "SegmentViewController.h"
+//#import "SegmentViewController.h"
 
 @interface TableViewController ()
 
@@ -31,6 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //TODO: Set Observer NSNotificationCenter
+    
 //    [self.view setBackgroundColor:[UIColor redColor]];
 
     
@@ -47,12 +49,26 @@
 
 }
 
-- (void)nextVC
-{
-    SegmentViewController *segVC = [[SegmentViewController alloc] init];
-    
-    [self.navigationController pushViewController:segVC animated:YES];
+//- (void)nextVC
+//{
+//    SegmentViewController *segVC = [[SegmentViewController alloc] init];
+//    
+//    [self.navigationController pushViewController:segVC animated:YES];
+//
+//}
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    if (![[self.navigationController viewControllers] containsObject:self]) {
+        
+        NSLog(@"Table View Controller: viewWillDisappear \n %c", [[self.navigationController viewControllers] containsObject:self]);
+        //TODO: Remove Observer from NSNotificationCenter here
+    }
+    
+    if ([self isMovingFromParentViewController]) {
+        
+         NSLog(@"Table View Controller: viewWillDisappear \n %hhd", [self isBeingDismissed]);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,6 +88,11 @@
     return 20;
 }
 
+- (void)configCustomCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //TODO: Get data(Items) from storage and configure cell
+
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -83,6 +104,7 @@
     }
     
     // Configure the cell...
+    [self configCustomCell:cell forRowAtIndexPath:indexPath];
     
     return cell;
 }

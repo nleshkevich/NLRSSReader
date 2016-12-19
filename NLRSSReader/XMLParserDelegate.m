@@ -13,80 +13,89 @@
 
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *link;
-@property(nonatomic, copy) NSString *text;
+@property(nonatomic, copy) NSString *descr;
 @property(nonatomic, copy) NSString *imageURL;
-@property(nonatomic, copy) NSString *date;
-@property(nonatomic, copy) NSString *temp;
+@property(nonatomic, copy) NSDate   *date;
+@property(nonatomic, copy) NSString *tempString;
+@property(nonatomic, copy) NSString *element;
+
 
 @end
 
 @implementation XMLParserDelegate
 
-static int counter = 0;
-
 - (void)parserDidStartDocument:(NSXMLParser *)parser
 {
-    NSLog(@"Did Start Document");
+    //    NSLog(@"Did Start Document");
     self.title = [[NSString alloc] init];
     self.link = [[NSString alloc] init];
-    self.text = [[NSString alloc] init];
+    self.descr = [[NSString alloc] init];
     self.imageURL = [[NSString alloc] init];
-    self.date = [[NSString alloc] init];
+    self.date = [[NSDate alloc] init];
 }
 
 - (void)parser:(NSXMLParser *)parser
-    didStartElement:(NSString *)elementName
-        namespaceURI:(NSString *)namespaceURI
-            qualifiedName:(NSString *)qName
-                attributes:(NSDictionary *)attributeDict
+didStartElement:(NSString *)elementName
+  namespaceURI:(NSString *)namespaceURI
+ qualifiedName:(NSString *)qName
+    attributes:(NSDictionary *)attributeDict
 {
-    NSLog(@"Element name: %@", elementName);
-    NSLog(@"qualifiedName : %@", qName);
-    NSLog(@"Attributes: %@", attributeDict);
     
-    self.temp = @"";
+    self.element = elementName;
+    self.tempString = @"";
     
     if ([elementName isEqualToString:kDescriptionElementName]) {
-//        NSLog(@"")
+        
     }
-
+    
 }
 
 - (void)parser:(NSXMLParser *)parser
-        didEndElement:(NSString *)elementName
-            namespaceURI:(NSString *)namespaceURI
-                qualifiedName:(NSString *)qName
+ didEndElement:(NSString *)elementName
+  namespaceURI:(NSString *)namespaceURI
+ qualifiedName:(NSString *)qName
 {
+    
     if ([elementName isEqualToString:kItemElementName]){
         
     } else if ([elementName isEqualToString:kTitleElementName]){
-        self.title = self.temp;
+        self.title = self.tempString;
     } else if ([elementName isEqualToString:kLinkElementName]){
-        self.link = self.temp;
+        self.link = self.tempString;
     } else if ([elementName isEqualToString:kDescriptionElementName]){
-        self.text = self.temp;
+        
+        int rangeStart = [self.tempString rangeOfString:kImgURLStartElementSearchStr].location;
+        int rangeEnd = [self.tempString rangeOfString:kImgURLEndElementSearchStr].location;
+        
+        if (rangeStart >=0 && rangeEnd >=0 && rangeStart != NSNotFound && rangeEnd != NSNotFound) {
+            
+            self.imageURL = [self.tempString substringWithRange:NSMakeRange([kImgURLStartElementSearchStr length], rangeEnd - [kImgURLStartElementSearchStr length])];
+        }
+        
+        rangeStart = [self.tempString rangeOfString:kDescrStartElementSearchStr].location;
+        rangeEnd = [self.tempString rangeOfString:kDescrEndElementSearchStr].location;
+        
+        if (rangeStart >=0 && rangeEnd >=0 && rangeStart != NSNotFound && rangeEnd != NSNotFound) {
+            
+            self.descr = [self.tempString substringWithRange:NSMakeRange(rangeStart + [kDescrStartElementSearchStr length], rangeEnd - rangeStart - [kDescrEndElementSearchStr length])];
+        }
+        
     } else if ([elementName isEqualToString:kPubDateElementName]){
-        self.date = self.temp;
+        
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:kDateFormat];
+        NSDate *date = [dateFormat dateFromString:self.tempString];
+        self.date = date;
     }
-    
-    
     
 }
 
-- (void)parser:(NSXMLParser *)parser foundCDATA:(nonnull NSData *)CDATABlock
-{
-    
-    NSString *str = [[NSString alloc] initWithData:CDATABlock encoding:NSUTF8StringEncoding];
-    NSLog(@"CDATABlock: %@", str);
-    self.temp = str;
-}
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
-    NSLog(@"foundCharacters: %@", string);
-    if (counter == 0){
-        self.temp = [self.temp stringByAppendingString:string];
-    }
+    
+    self.tempString = [self.tempString stringByAppendingString:string];
+    
 }
 
 @end

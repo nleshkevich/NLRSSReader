@@ -29,7 +29,7 @@ static DataLoader *sharedInstance;
 {
     [[DataLoader getInstance]  downloadDataBg];
 }
-     
+
 - (void)downloadDataBg
 {
     //Create block to execute
@@ -52,10 +52,9 @@ static DataLoader *sharedInstance;
         
     };
     
-    //Create queue with unique name
-    dispatch_queue_t fetch_queue = dispatch_queue_create("com.rssReader.queue", NULL);
     //Dispatch queue
-    dispatch_async(fetch_queue, dispatch_block);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), dispatch_block);
+    //    dispatch_async(fetch_queue, dispatch_block);
     
 }
 
