@@ -15,6 +15,7 @@
 		D9729EB61DF846F10059C284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9729EB51DF846F10059C284 /* Assets.xcassets */; };
 		D9D803581E080548003C74D9 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D803571E080548003C74D9 /* Item.m */; };
 		D9D8035B1E08099D003C74D9 /* Item+Init.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D8035A1E08099D003C74D9 /* Item+Init.m */; };
+		D9D8035F1E0833A2003C74D9 /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D8035E1E0833A2003C74D9 /* ItemTableViewCell.m */; };
 		D9E379461DF9963600C5934C /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E379451DF9963600C5934C /* TableViewController.m */; };
 		D9E379481DF99B3B00C5934C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9E379471DF99B3B00C5934C /* Default-568h@2x.png */; };
 		D9E3794D1DFA9A8100C5934C /* SegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E3794C1DFA9A8100C5934C /* SegmentViewController.m */; };
@@ -38,6 +39,8 @@
 		D9D803571E080548003C74D9 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		D9D803591E08099D003C74D9 /* Item+Init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Item+Init.h"; sourceTree = "<group>"; };
 		D9D8035A1E08099D003C74D9 /* Item+Init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Item+Init.m"; sourceTree = "<group>"; };
+		D9D8035D1E0833A2003C74D9 /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
+		D9D8035E1E0833A2003C74D9 /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
 		D9E379441DF9963600C5934C /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		D9E379451DF9963600C5934C /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		D9E379471DF99B3B00C5934C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				D9E3794C1DFA9A8100C5934C /* SegmentViewController.m */,
 				D9E379441DF9963600C5934C /* TableViewController.h */,
 				D9E379451DF9963600C5934C /* TableViewController.m */,
+				D9D8035D1E0833A2003C74D9 /* ItemTableViewCell.h */,
+				D9D8035E1E0833A2003C74D9 /* ItemTableViewCell.m */,
 				D9E3794E1DFAA3E900C5934C /* CollectionViewController.h */,
 				D9E3794F1DFAA3E900C5934C /* CollectionViewController.m */,
 				D93149561E01702900D52F57 /* Constants.h */,
@@ -187,6 +192,7 @@
 				D9E379501DFAA3E900C5934C /* CollectionViewController.m in Sources */,
 				D9729EAB1DF846F10059C284 /* AppDelegate.m in Sources */,
 				D9D8035B1E08099D003C74D9 /* Item+Init.m in Sources */,
+				D9D8035F1E0833A2003C74D9 /* ItemTableViewCell.m in Sources */,
 				D93149541E0166B200D52F57 /* DataLoader.m in Sources */,
 				D9E3794D1DFA9A8100C5934C /* SegmentViewController.m in Sources */,
 				D9D803581E080548003C74D9 /* Item.m in Sources */,
@@ -292,6 +298,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4B24TB93H6;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = NLRSSReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ee.NLRSSReader;
@@ -305,6 +313,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 4B24TB93H6;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = NLRSSReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ee.NLRSSReader;

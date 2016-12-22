@@ -15,5 +15,6 @@
 @dynamic descr;
 @dynamic imageURL;
 @dynamic pubDate;
+@dynamic image;
 
 @end

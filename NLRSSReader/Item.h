@@ -14,6 +14,8 @@
 @property (nullable, nonatomic, copy) NSString *link;
 @property (nullable, nonatomic, copy) NSString *descr;
 @property (nullable, nonatomic, copy) NSString *imageURL;
-@property (nullable, nonatomic, copy) NSDate *pubDate;
+@property (nullable, nonatomic, copy) NSDate   *pubDate;
+@property (nullable, nonatomic, copy) NSData   *image;
+
 
 @end

@@ -88,7 +88,7 @@
     return 20;
 }
 
-- (void)configCustomCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)configCustomCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     //TODO: Get data(Items) from storage and configure cell
 
@@ -104,7 +104,7 @@
     }
     
     // Configure the cell...
-    [self configCustomCell:cell forRowAtIndexPath:indexPath];
+    [self configCustomCell:cell atIndexPath:indexPath];
     
     return cell;
 }

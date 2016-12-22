@@ -9,6 +9,10 @@
 #ifndef Constants_h
 #define Constants_h
 
+#define ScreenHeight [[UIScreen mainScreen]bounds].size.height
+
+#define ScreenWidth [[UIScreen mainScreen]bounds].size.width
+
 static NSString * const kRSSFeedURL= @"https://news.tut.by/rss/all.rss"; //TutBy
 
 //XML Parser
