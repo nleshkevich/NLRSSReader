@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A6218151E0EEE2400E373E4 /* UIImage+ImageFromURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6218141E0EEE2400E373E4 /* UIImage+ImageFromURL.m */; };
 		D93149541E0166B200D52F57 /* DataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D93149531E0166B200D52F57 /* DataLoader.m */; };
 		D93149591E017DE000D52F57 /* XMLParserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D93149581E017DE000D52F57 /* XMLParserDelegate.m */; };
 		D9729EA81DF846F10059C284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9729EA71DF846F10059C284 /* main.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A6218131E0EEE2400E373E4 /* UIImage+ImageFromURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageFromURL.h"; sourceTree = "<group>"; };
+		8A6218141E0EEE2400E373E4 /* UIImage+ImageFromURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageFromURL.m"; sourceTree = "<group>"; };
 		D93149521E0166B200D52F57 /* DataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLoader.h; sourceTree = "<group>"; };
 		D93149531E0166B200D52F57 /* DataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLoader.m; sourceTree = "<group>"; };
 		D93149561E01702900D52F57 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -97,6 +100,8 @@
 				D9E379451DF9963600C5934C /* TableViewController.m */,
 				D9D8035D1E0833A2003C74D9 /* ItemTableViewCell.h */,
 				D9D8035E1E0833A2003C74D9 /* ItemTableViewCell.m */,
+				8A6218131E0EEE2400E373E4 /* UIImage+ImageFromURL.h */,
+				8A6218141E0EEE2400E373E4 /* UIImage+ImageFromURL.m */,
 				D9E3794E1DFAA3E900C5934C /* CollectionViewController.h */,
 				D9E3794F1DFAA3E900C5934C /* CollectionViewController.m */,
 				D93149561E01702900D52F57 /* Constants.h */,
@@ -190,6 +195,7 @@
 				D9E379461DF9963600C5934C /* TableViewController.m in Sources */,
 				D9729EB41DF846F10059C284 /* NLRSSReader.xcdatamodeld in Sources */,
 				D9E379501DFAA3E900C5934C /* CollectionViewController.m in Sources */,
+				8A6218151E0EEE2400E373E4 /* UIImage+ImageFromURL.m in Sources */,
 				D9729EAB1DF846F10059C284 /* AppDelegate.m in Sources */,
 				D9D8035B1E08099D003C74D9 /* Item+Init.m in Sources */,
 				D9D8035F1E0833A2003C74D9 /* ItemTableViewCell.m in Sources */,

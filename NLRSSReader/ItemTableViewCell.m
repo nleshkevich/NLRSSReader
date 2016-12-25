@@ -22,6 +22,12 @@
     return self;
 }
 
+- (void)configureCellWithItem:(Item *)item
+{
+    [self createViews];
+    [self setItem:item];
+}
+
 - (void)createViews
 {
     self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 80, 60)];
@@ -39,8 +45,6 @@
     self.pubDateLabel = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth - 40, 30, 40, 25)];
     [self.contentView addSubview:self.pubDateLabel];
     
-   
-    
 }
 
 - (void)setItem:(Item *)item
@@ -53,19 +57,20 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
     self.pubDateLabel.text = [dateFormatter stringFromDate:item.pubDate];
+   
     
-    [self loadImgForItem:item];
+//    [self loadImgForItem:item];
     
 //    self.imgView.image
-//    self 
+//    [self setNeedsLayout];
     
 }
 
-- (void)loadImgForItem:(Item *)item
-{
-    NSURLRequest *reques = [NSURLRequest requestWithURL:[NSURL URLWithString:item.imageURL]];
-    
-}
+//- (void)loadImgForItem:(Item *)item
+//{
+//    NSURLRequest *reques = [NSURLRequest requestWithURL:[NSURL URLWithString:item.imageURL]];
+//    
+//}
 
 
 

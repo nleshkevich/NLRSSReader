@@ -7,7 +7,7 @@
 //
 
 #import "TableViewController.h"
-//#import "SegmentViewController.h"
+#import "Item+Init.h"
 
 @interface TableViewController ()
 
@@ -91,6 +91,7 @@
 - (void)configCustomCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     //TODO: Get data(Items) from storage and configure cell
+//    Item *item = [Item];
 
 }
 

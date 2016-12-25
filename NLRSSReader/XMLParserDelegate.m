@@ -11,13 +11,13 @@
 
 @interface XMLParserDelegate ()
 
-@property(nonatomic, copy) NSString *title;
-@property(nonatomic, copy) NSString *link;
-@property(nonatomic, copy) NSString *descr;
-@property(nonatomic, copy) NSString *imageURL;
-@property(nonatomic, copy) NSDate   *date;
-@property(nonatomic, copy) NSString *tempString;
-@property(nonatomic, copy) NSString *element;
+@property(nonatomic, strong) NSString *title;
+@property(nonatomic, strong) NSString *link;
+@property(nonatomic, strong) NSString *descr;
+@property(nonatomic, strong) NSString *imageURL;
+@property(nonatomic, strong) NSString   *date;
+@property(nonatomic, strong) NSString *tempString;
+@property(nonatomic, strong) NSString *element;
 
 
 @end
@@ -31,7 +31,7 @@
     self.link = [[NSString alloc] init];
     self.descr = [[NSString alloc] init];
     self.imageURL = [[NSString alloc] init];
-    self.date = [[NSDate alloc] init];
+    self.date = [[NSString alloc] init];
 }
 
 - (void)parser:(NSXMLParser *)parser
@@ -82,10 +82,7 @@ didStartElement:(NSString *)elementName
         
     } else if ([elementName isEqualToString:kPubDateElementName]){
         
-        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-        [dateFormat setDateFormat:kDateFormat];
-        NSDate *date = [dateFormat dateFromString:self.tempString];
-        self.date = date;
+        self.date = self.tempString;
     }
     
 }

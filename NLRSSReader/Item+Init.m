@@ -26,12 +26,22 @@
                   link:(NSString *)link
            description:(NSString *)description
               imageURL:(NSString *)imgURL
-                  date:(NSDate *)date
+                  date:(NSString *)date
 {
     
     Item *item = nil;
     
-    return nil;//Item;
+    item.title  = title;
+    item.link   = link;
+    item.descr  = description;
+    item.imageURL = imgURL;
+    
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:kDateFormat];
+    item.pubDate = [formatter dateFromString:date];
+    
+    return item;//Item;
 }
 
 @end

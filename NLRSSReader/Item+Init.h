@@ -14,6 +14,6 @@
                   link:(NSString *)link
            description:(NSString *)description
               imageURL:(NSString *)imgURL
-                  date:(NSDate *)date;
+                  date:(NSString *)date;
 
 @end
