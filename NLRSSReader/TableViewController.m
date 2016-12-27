@@ -87,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return 20;
+    return 320;
 }
 
 - (void)configCustomCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath

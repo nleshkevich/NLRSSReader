@@ -34,6 +34,7 @@
 - (void)createViews
 {
     self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 80, 60)];
+//    self.imgView.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.imgView];
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 5, ScreenWidth - 90, 25)];
