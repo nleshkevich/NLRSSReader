@@ -40,7 +40,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:kDateFormat];
     item.pubDate = [formatter dateFromString:date];
-    
+
     return item;//Item;
 }
 

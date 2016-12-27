@@ -18,4 +18,6 @@
 
 @property (nonatomic, strong) Item        *item;
 
+- (void)configureCellWithItem:(Item *)item;
+
 @end

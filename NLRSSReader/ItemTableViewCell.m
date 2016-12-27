@@ -8,6 +8,7 @@
 
 #import "ItemTableViewCell.h"
 #import "Constants.h"
+#import "UIImage+ImageFromURL.h"
 
 @implementation ItemTableViewCell
 
@@ -25,7 +26,9 @@
 - (void)configureCellWithItem:(Item *)item
 {
     [self createViews];
-    [self setItem:item];
+    [self setViewsFromItem:item];
+    //[self setItem:item];
+    
 }
 
 - (void)createViews
@@ -47,29 +50,53 @@
     
 }
 
-- (void)setItem:(Item *)item
+- (void)setViewsFromItem:(Item *)item
 {
     self.item = item;
     
-    self.titleLabel.text = item.title;
-    self.descriptLabel.text = item.descr;
+    self.titleLabel.text = @"В России образовался новый ВИЧ";//item.title;
+    self.descriptLabel.text = @"Опасный вирус иммунодефицита человека образовался в России из смешения ранее доминировавшего в РФ штамма и нового агента, занесенного из Центральной Азии";//item.descr;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-    self.pubDateLabel.text = [dateFormatter stringFromDate:item.pubDate];
-   
+    self.pubDateLabel.text = @"Tue, 27 Dec 2016 16:15:00 +0300";//[dateFormatter stringFromDate:item.pubDate];
     
-//    [self loadImgForItem:item];
-    
-//    self.imgView.image
-//    [self setNeedsLayout];
-    
+    if (item.image == nil)
+    {
+        [UIImage loadFromURL:[NSURL URLWithString:@"http://img.tyt.by/thumbnails/n/it/01/2/medicina_lekarstvo_laboratoriya_bakterii_reuters.jpg"/*item.imageURL*/] completion:^(UIImage *image) {
+            
+            item.image = UIImagePNGRepresentation(image);
+            [self.imgView setImage:image];
+            
+            [self setNeedsLayout];
+            
+        }];
+    }
+
 }
 
-//- (void)loadImgForItem:(Item *)item
+//- (void)setItem:(Item *)item
 //{
-//    NSURLRequest *reques = [NSURLRequest requestWithURL:[NSURL URLWithString:item.imageURL]];
+//    self.item = item;
 //    
+//    self.titleLabel.text = item.title;
+//    self.descriptLabel.text = item.descr;
+//    
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+//    self.pubDateLabel.text = [dateFormatter stringFromDate:item.pubDate];
+//   
+//    if (item.image == nil)
+//    {
+//        [UIImage loadFromURL:[NSURL URLWithString:item.imageURL] completion:^(UIImage *image) {
+//            
+//            item.image = UIImagePNGRepresentation(image);
+//            [self.imgView setImage:image];
+//            
+//            [self setNeedsLayout];
+//            
+//        }];
+//    }
 //}
 
 

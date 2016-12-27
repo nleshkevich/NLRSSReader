@@ -7,7 +7,9 @@
 //
 
 #import "TableViewController.h"
+#import "ItemTableViewCell.h"
 #import "Item+Init.h"
+#import "Constants.h"
 
 @interface TableViewController ()
 
@@ -91,17 +93,25 @@
 - (void)configCustomCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     //TODO: Get data(Items) from storage and configure cell
-//    Item *item = [Item];
+    //Test data
+    Item *item = [Item itemWithTitle:@"В России образовался новый ВИЧ"
+                                link:@"http://42.tut.by/525489?utm_campaign=news-feed&#x26;utm_medium=rss&#x26;utm_source=rss-news"
+                         description:@"Опасный вирус иммунодефицита человека образовался в России из смешения ранее доминировавшего в РФ штамма и нового агента, занесенного из Центральной Азии"
+                            imageURL:@"http://img.tyt.by/thumbnails/n/it/01/2/medicina_lekarstvo_laboratoriya_bakterii_reuters.jpg"
+                                date:@"Tue, 27 Dec 2016 16:15:00 +0300"];
+    
+    ItemTableViewCell *itemCell = (ItemTableViewCell *)cell;
+    [itemCell configureCellWithItem:item];
 
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *cellIdentifier = @"TableCellIdentifier";
+//    static NSString *cellIdentifier = @"TableCellIdentifier";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    ItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        cell = [[ItemTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kTableViewCellIdentifier];
     }
     
     // Configure the cell...
