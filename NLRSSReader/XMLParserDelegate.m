@@ -15,7 +15,7 @@
 @property(nonatomic, strong) NSString *link;
 @property(nonatomic, strong) NSString *descr;
 @property(nonatomic, strong) NSString *imageURL;
-@property(nonatomic, strong) NSString   *date;
+@property(nonatomic, strong) NSString *date;
 @property(nonatomic, strong) NSString *tempString;
 @property(nonatomic, strong) NSString *element;
 

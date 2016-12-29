@@ -18,23 +18,20 @@
     if (self) {
 //        self
         //TODO: Create code here
+//        self.backgroundColor = [UIColor greenColor]; //for testing purpose
+        [self createViews];
     }
     
     return self;
 }
 
-- (void)configureCellWithItem:(Item *)item
-{
-    [self createViews];
-    [self setViewsFromItem:item];
-    //[self setItem:item];
-    
-}
+
 
 - (void)createViews
 {
-    self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 80, 60)];
-//    self.imgView.backgroundColor = [UIColor redColor];
+    
+    self.imgView = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, 80, 60)];
+    //    self.imgView.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.imgView];
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 5, ScreenWidth - 90, 25)];
@@ -51,8 +48,9 @@
     
 }
 
-- (void)setViewsFromItem:(Item *)item
+- (void)configureCellWithItem:(Item *)item
 {
+    
     self.item = item;
     
     self.titleLabel.text = @"В России образовался новый ВИЧ";//item.title;
@@ -73,34 +71,8 @@
             
         }];
     }
-
+    
 }
-
-//- (void)setItem:(Item *)item
-//{
-//    self.item = item;
-//    
-//    self.titleLabel.text = item.title;
-//    self.descriptLabel.text = item.descr;
-//    
-//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-//    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-//    self.pubDateLabel.text = [dateFormatter stringFromDate:item.pubDate];
-//   
-//    if (item.image == nil)
-//    {
-//        [UIImage loadFromURL:[NSURL URLWithString:item.imageURL] completion:^(UIImage *image) {
-//            
-//            item.image = UIImagePNGRepresentation(image);
-//            [self.imgView setImage:image];
-//            
-//            [self setNeedsLayout];
-//            
-//        }];
-//    }
-//}
-
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

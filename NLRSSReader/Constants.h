@@ -9,8 +9,8 @@
 #ifndef Constants_h
 #define Constants_h
 
+//Screen
 #define ScreenHeight [[UIScreen mainScreen]bounds].size.height
-
 #define ScreenWidth [[UIScreen mainScreen]bounds].size.width
 
 static NSString * const kRSSFeedURL= @"https://news.tut.by/rss/all.rss"; //TutBy
@@ -37,5 +37,8 @@ static NSString * const kDateFormat= @"EEE, dd MMM yyyy HH:mm:ss Z\n";
 
 //Table View
 static NSString * const kTableViewCellIdentifier = @"CustomTableViewCell";
+
+//Table View Cell
+#define kCellHeight 130.0f
 
 #endif //Constants_h

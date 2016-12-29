@@ -35,29 +35,9 @@
     
     //TODO: Set Observer NSNotificationCenter
     
-//    [self.view setBackgroundColor:[UIColor redColor]];
-
-    
-        // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//    UIBarButtonItem *nextVCBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
-//                                                                                     target:self
-//                                                                                     action:@selector(nextVC)];
-//    
-//    self.navigationItem.rightBarButtonItem = nextVCBarButton;
-
+    [self.tableView setBackgroundColor:[UIColor grayColor]];
 
 }
-
-//- (void)nextVC
-//{
-//    SegmentViewController *segVC = [[SegmentViewController alloc] init];
-//    
-//    [self.navigationController pushViewController:segVC animated:YES];
-//
-//}
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -120,6 +100,10 @@
     return cell;
 }
 
+ - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return kCellHeight;
+}
 
 /*
 // Override to support conditional editing of the table view.
