@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "ItemTableViewCell.h"
+#import "ItemCell.h"
 #import "Item+Init.h"
 #import "Constants.h"
 
@@ -36,6 +37,15 @@
     //TODO: Set Observer NSNotificationCenter
     
     [self.tableView setBackgroundColor:[UIColor grayColor]];
+    
+    //Set offset for table
+//    CGPointMake(<#CGFloat x#>, <#CGFloat y#>)
+    [self.tableView setContentOffset:CGPointMake(50, 50)];
+    
+    //Register custom table cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ItemCell class]) bundle:nil]
+                        forCellReuseIdentifier:NSStringFromClass([ItemCell class])];
+    
 
 }
 
@@ -61,7 +71,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
+//#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
@@ -87,15 +97,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    static NSString *cellIdentifier = @"TableCellIdentifier";
+//    ItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellIdentifier];
+//    if (!cell) {
+//        cell = [[ItemTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kTableViewCellIdentifier];
+//    }
+//    
+//    // Configure the cell...
+//    [self configCustomCell:cell atIndexPath:indexPath];
     
-    ItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewCellIdentifier];
-    if (!cell) {
-        cell = [[ItemTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:kTableViewCellIdentifier];
-    }
-    
-    // Configure the cell...
-    [self configCustomCell:cell atIndexPath:indexPath];
+    ItemCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ItemCell class])
+                                                     forIndexPath:indexPath];
     
     return cell;
 }

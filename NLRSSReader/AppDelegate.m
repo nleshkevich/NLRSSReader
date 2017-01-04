@@ -41,6 +41,9 @@
 //    collectionViewController.collectionView.frame = self.window.bounds;
 
     navigationController = [[UINavigationController alloc] initWithRootViewController:segmentViewController];
+   
+//    Navigation Bar size
+//    NSLog(@"Navigation bar size %@", NSStringFromCGRect(self.navigationController.navigationBar.frame));
     
     self.window.rootViewController = navigationController;
 

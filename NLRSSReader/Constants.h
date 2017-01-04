@@ -37,8 +37,9 @@ static NSString * const kDateFormat= @"EEE, dd MMM yyyy HH:mm:ss Z\n";
 
 //Table View
 static NSString * const kTableViewCellIdentifier = @"CustomTableViewCell";
+#define kTableViewOffset UIEdgeInsetsMake(50, 0, 0, 0)
 
 //Table View Cell
-#define kCellHeight 130.0f
+#define kCellHeight 164.0f
 
 #endif //Constants_h
